@@ -23,3 +23,7 @@ console.log(Name)
 // 3. _name$ - only two special chars are allowed in identifier
 // 4. no space is allowed in between 
  //var name 1 - not allowed
+
+ //defualt value for any identifier is - undefined
+
+ 
