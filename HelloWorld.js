@@ -1,6 +1,6 @@
 console.log("Hello World From VS code using Node Server")
 
-var Name = "Cody";
+var Name = "Cody"
 
 console.log(`Name ${Name}`)
 
@@ -10,4 +10,4 @@ function PrintAge(age)
     return age;
 }
 
-PrintAge(21);
+PrintAge(21)
