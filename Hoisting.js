@@ -1,7 +1,7 @@
 //Hoisting : A phenomenon when we are able to get the values in variables or functions even before they are decalred
 // this also gives a compilation behaviour to javascript, so this creates a snapshot of all the vars and functions
-// variables default value - undefined
-// functions dafault value - function definition
+// variables default value - undefined (variable hositing)
+// functions dafault value - function definition (functional hoisting)
 
 //console.log("This is new value - " + newValue)//ReferenceError: newValue is not defined
 //var myValue = undefined; : Hoisting
