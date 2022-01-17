@@ -39,3 +39,8 @@ myValue = {}; //object
 
 console.log(myValue)
 console.log(typeof myValue)
+
+//symbol data introduced in ES6
+mySym = Symbol("New Value");
+console.log("Symbol ", mySym);
+console.log("TypeOf Symbol ", typeof mySym);
