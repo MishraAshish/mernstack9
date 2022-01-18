@@ -11,3 +11,7 @@ if (VoterAge === "18" && VoterId) { //this is a triple equal to comparison, it c
 } else {
     console.log("InValid voter, can't vote")
 }
+
+
+//ternary operators
+VoterId && VoterAge === "18" ? console.log("Allowed to vote ternary") : console.log("Not Allowed to vote ternary");
