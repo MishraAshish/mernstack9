@@ -34,3 +34,5 @@ userObj.getUser = function () {
     return "From Child Override"
 }
 console.log(userObj.getUser());
+
+//Please give me an example of - All Types of functions, overloading, closures, hoisting (variable and functional both), and printing all javascript dataTypes
