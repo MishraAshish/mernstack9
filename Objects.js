@@ -46,3 +46,29 @@ student.getUserDetails = function () {
 }
 
 console.log(student.getUserDetails()); 
+
+//merging two objects, with deep copy
+
+var obj1 = {name : "MyName", age : 29, salary : 250}
+var obj1_1 = {name : "MyName1", session:"MERNStack"}
+var obj2 = {name : "YourName", address:"New City ", skills : "Javascript"}
+
+obj1 = Object.assign(obj1, obj2, obj1_1);
+
+console.log(obj1);
+
+//if we wish to break the prototype chain
+//you need to pass null in your object create constructor
+
+var nullProtoype =  Object.create(null);
+
+console.log(nullProtoype.__proto__)
+
+var emptyProtoype =  Object.create({});
+
+console.log(emptyProtoype.__proto__)
+
+
+// create a student object with details like - name, address, mobile, method - getName, getAddress
+// override it with college st*udent put some new properties like college etc, new method to return college and override getAddress
+// give me example of no-prototype and merging of objects each.
