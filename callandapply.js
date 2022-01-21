@@ -57,11 +57,20 @@ GetVehicleInfo.apply(SomeCar,["Yes","5","4","Yes","China"])
 // TestMe();
 
 
-// var User = {
-//     name : "some name",
-//     getName : function () {
-//         console.log("this ", this)
-//     }
-// }
+var User = {
+    name : "some name",
+    getName : function () {
+        console.log("this ", this)
+        console.log("name - outer ", this.name);
 
-// User.getName()
+        // setTimeout(function () {
+        //     console.log("name - inner ", this.name)
+        // }, 1000)
+    }
+}
+
+User.getName()
+
+// setTimeout(function () {
+//     console.log("this ", this)
+// }, 1000)
