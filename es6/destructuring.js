@@ -74,3 +74,20 @@ let StudentTest = {
 
 //print firstname and sessionTopics, 
 //along with that also create a lastname and covered3 as "ES6", without making any change in StudentTest
+
+//question 2 :
+
+// assume below object you are going to get from an api (getstudent)
+let StudentMarks = {
+    name : "Your Name",
+    id : 21,
+    subjects : { 
+        maths : 25,
+        chemistry : 26,
+        biology : 27
+    },
+    hostel : "some hostel",
+    room : 209
+}
+
+//please print - student name, subjects(maths, chemistry and physics as 29 marks (without adding to student) and room)
