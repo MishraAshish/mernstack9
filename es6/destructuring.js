@@ -33,6 +33,44 @@ let [one, two, three, ...rest] = [1,2,3,4,5,6,7,7,9,8]
 //d. swapping of variables
 
 let morning = "sun", evening =  "moon";
-[morning, evening] = [evening, morning] //swapping of variables
-console.log(morning)
-console.log(evening)
+// [morning, evening] = [evening, morning] //swapping of variables
+// console.log(morning)
+// console.log(evening)
+
+//2. Object destructuring
+
+let User = {
+    name : "Kim",
+    address : {
+        addres1 : "Somewhere on earth",
+        addres2 : "Somewhere in US"
+    },
+    session : "ES6",
+
+}
+
+// let sessionName = User.session;
+// let address = User.address;
+// let name = User.name;
+
+let {session, hobby = "Music", address:{addres2}} = User;
+
+console.log(session)
+console.log(hobby)
+console.log(addres2)
+//console.log(address)
+//console.log(User)
+
+//question :
+
+let StudentTest = {
+    firstname : "Put your name",
+    address : " ??",
+    sessionTopics : {
+        covered1 : "CoreJS",
+        covered2 : "OOJS"
+    }
+}
+
+//print firstname and sessionTopics, 
+//along with that also create a lastname and covered3 as "ES6", without making any change in StudentTest
