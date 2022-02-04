@@ -20,9 +20,11 @@ let animalSoundES5 = {
  }
 
 //console.log("animalSoundES5 " + animalSoundES5) // [object object] 
-console.log("animalSoundES5 " + JSON.stringify(animalSoundES5)) // casting a json object to string
+//console.log("animalSoundES5 " + JSON.stringify(animalSoundES5)) // casting a json object to string
 //console.log("animalSoundES5 ", animalSoundES5)
 
 
 //AnimalSoundES6.toString() // [object object] 
-console.log("AnimalSoundES6 ", animalSoundES6) // es6 automatically does json to stringfy with keys
+//console.log("AnimalSoundES6 ", animalSoundES6) // es6 automatically does json to stringfy with keys
+
+module.exports = animalSoundES6;
