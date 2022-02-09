@@ -2,6 +2,9 @@
 
 //we assume that file in which we defined variables is constants.js
 
+import { CalculateArea } from "./class"
+import { CalculateArea } from "../corejs/MyModule"
+
 export const pi = 3.1415926; // named export
 export const phy = 3.39415926;
 export default shy = 1.242; //default export
