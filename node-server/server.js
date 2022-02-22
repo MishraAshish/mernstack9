@@ -1,0 +1,1 @@
+console.log("This file is named as server.js")

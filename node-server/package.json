@@ -1,0 +1,14 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "this is going to be node api for rest services",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "build":"node server",
+    "kim":"node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mit",
+  "license": "MIT"
+}
