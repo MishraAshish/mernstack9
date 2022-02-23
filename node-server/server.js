@@ -6,6 +6,12 @@ const port = 9000;
 //app.use("/static", express.static("public"))
 app.use("/static", express.static("public"))
 
+//http://localhost:9000/qs?name=cody hall&age=19&session=express
+app.get('/qs', function (req, res) {
+    const qsData = req.query;
+    res.json(qsData)
+  })
+
 app.get('/getname', function (req, res) {
     res.send('this is coming from getname api')
   })
