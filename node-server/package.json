@@ -5,10 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "build":"node server",
-    "kim":"node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mit",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.3"
+  },
+  "devDependencies": {}
 }
