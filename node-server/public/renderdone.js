@@ -1,0 +1,1 @@
+alert("Rendering of index html is done on browser!")
