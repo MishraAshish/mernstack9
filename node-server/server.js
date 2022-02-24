@@ -56,3 +56,7 @@ app.get('/', function (req, res) {
 
 console.log(`Application is listening at port :${port} - localhost:${port}`)
 app.listen(port)
+
+//create an api to save student details in a file - where we'll get student info like - name, age, session, etc from query string
+//create another api to fetch student details from a file in json object - if student id is less 
+//than 50 it should return the info saved in prev api, using routeparam
