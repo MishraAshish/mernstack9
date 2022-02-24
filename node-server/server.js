@@ -7,14 +7,31 @@ const port = 9000;
 app.use("/static", express.static("public"))
 
 //http://localhost:9000/qs?name=cody hall&age=19&session=express
-app.get('/qs', function (req, res) {
+app.get('/qs', function (req, res) { //query string from client (browser url => ? &)
     const qsData = req.query;
     res.json(qsData)
-  })
+})
+
+//route params => http://localhost:9000/product/:id/details
+app.get('/product/:id/details', function (req, res) { //:id - is refered as route parameter
+  const routeParam = req.params["id"];
+  if (routeParam >= 25) {
+    res.json({
+      name : "New Product",
+      availability : "Available",
+      productId : routeParam
+    })
+  } else {
+    res.json({
+      availability : "Not Available",
+      productId : routeParam
+    })
+  }
+})
 
 app.get('/getname', function (req, res) {
     res.send('this is coming from getname api')
-  })
+})
 
 app.get('/gethtml', function (req, res) {
     res.send("<h1>This is html<h1>")
