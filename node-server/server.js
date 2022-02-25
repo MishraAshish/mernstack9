@@ -7,13 +7,19 @@ const adminApp = express(); // created admin application
 //app.use("/static", express.static("public"))
 app.use("/static", express.static("public"))
 
+app.get("/explorerequest", (req, res)=>{
+    console.log("Request Object ", req);
+
+    res.send("Response")
+})
+
 //http://localhost:9000/qs?name=cody hall&age=19&session=express
 app.get('/qs', function (req, res) { //query string from client (browser url => ? &)
     const qsData = req.query;
     res.json(qsData)
 })
 
-//route params => http://localhost:9000/product/:id/details
+//route params => http://localhost:9000/product/29/details
 app.get('/product/:id/details', function (req, res) { //:id - is refered as route parameter
   const routeParam = req.params["id"];
   if (routeParam >= 25) {
