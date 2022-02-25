@@ -1,87 +1,20 @@
-const express = require('express'); //importing express module - complete module
-const app = express() //we invoke top level function to create an express application
+const express = require('express'); // imported express module or top level class of express
 const port = 9000;
-const adminApp = express(); // created admin application 
+const app = express(); //by invoking top level class we are initilizing the application
+const router = require("./routes/router");
+const adminRouter = require('./routes/adminrouter');
 
-// serve static files like images css using static middleware
-//app.use("/static", express.static("public"))
-app.use("/static", express.static("public"))
+const adminApp = express();
 
-app.get("/explorerequest", (req, res)=>{
-    console.log("Request Object ", req);
+app.use('/static', express.static('public')); // serve static files like images css using static middle ware
 
-    res.send("Response")
-})
+app.use("/admin", adminApp); //mounting to admin app
+adminApp.use("/",adminRouter); //routing the /admin requests to admin route table
 
-//http://localhost:9000/qs?name=cody hall&age=19&session=express
-app.get('/qs', function (req, res) { //query string from client (browser url => ? &)
-    const qsData = req.query;
-    res.json(qsData)
-})
+app.use("/", router);
 
-//route params => http://localhost:9000/product/29/details
-app.get('/product/:id/details', function (req, res) { //:id - is refered as route parameter
-  const routeParam = req.params["id"];
-  if (routeParam >= 25) {
-    res.json({
-      name : "New Product",
-      availability : "Available",
-      productId : routeParam
-    })
-  } else {
-    res.json({
-      availability : "Not Available",
-      productId : routeParam
-    })
-  }
-})
-
-app.get('/getname', function (req, res) {
-    res.send('this is coming from getname api')
-})
-
-app.get('/gethtml', function (req, res) {
-    res.send("<h1>This is html<h1>")
-})
-
-app.get('/getfile', function (req, res) {
-    res.sendFile(__dirname+"/public/index.html")
-})
-
-// app.get('/public/renderdone.js', function (req, res) {
-//     res.sendFile(__dirname+"/public/renderdone.js")
-// })
-
-
-//application mounting process in express
-app.use("/admin",adminApp);
-
-adminApp.get("/Details",(req, res)=>{
-    res.json({
-      appName : "admin",
-      approle : "Execute admin task"
-    })
-})
-
-adminApp.get("/helloadmin",(req, res)=>{
-  res.send("Hello Admin!")
-})
-
-
-app.get('/', function (req, res) {
-  res.send('Hello World - Cody, Kim, Tohney and Hoian')
-})
-
-// app.get('*', function (req, res) {
-//     res.send('Default Response')
-//   })
-  
-
-console.log(`Application is listening at port :${port} - localhost:${port}`)
+console.log(`we are listening on port ${port} with url http://localhost:9000`)
 app.listen(port)
 
-//create an api to save student details in a file - where we'll get student info like - name, age, session, etc from query string
-//create another api to fetch student details from a file in json object - if student id is less 
-//than 50 it should return the info saved in prev api, using routeparam
-
-//create a mounted application with name student to get student details
+//split out all the routes that we have created so far in router and student router
+//also include mounting of express application
