@@ -4,6 +4,7 @@ let express = require('express');
 let adminRouter = express.Router({})//
 let adminModel = require('../datamodel/adminDataModel');
 
+//http://localhost:9000/admin/create?age=21&session=mongodb&address=somewhere%20on%20us&name=kim&allow=true
 adminRouter.get("/create",(req, res)=>{
   //req.query ==> name,age,session,address ?
 
