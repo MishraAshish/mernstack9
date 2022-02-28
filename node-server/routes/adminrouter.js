@@ -2,6 +2,22 @@
 
 let express = require('express');
 let adminRouter = express.Router({})//
+let adminModel = require('../datamodel/adminDataModel');
+
+adminRouter.get("/create",(req, res)=>{
+  //req.query ==> name,age,session,address ?
+
+  let adminObj = new adminModel(req.query)
+  
+  adminObj.save((err, data)=>{
+      if (err) {
+        console.log('err ', err)
+        res.send('error occured')
+      } else {
+        res.json(data) //_id alongwith req.query data is passed
+      }
+  })
+})
 
 adminRouter.get("/Details",(req, res)=>{
     res.json({

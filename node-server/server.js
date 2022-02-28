@@ -18,3 +18,21 @@ app.listen(port)
 
 //split out all the routes that we have created so far in router and student router
 //also include mounting of express application
+
+
+
+//like - nolike or like => table (bool - true/false) => columns (5)
+//new-like(reaction) => like, celebrate, support, etc
+
+//table - userInfo 
+//userInfo => Addresses => (Address Table (addressid))
+
+//document db
+// {
+//     userinfo : //
+//     address : [
+//         address1 : "",
+//         address2 : "",
+//         address3 : "",
+//     ]
+// }
