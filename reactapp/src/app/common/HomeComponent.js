@@ -16,16 +16,34 @@ export default class Home extends Component {
                 flatNo : "12451",
                 street : "Orange Street",
                 zipcode : "a4b45g"
-            }
+            },
+            username : props.username
         }
+    }
+
+    onChangeText = (evt) => {
+        console.log("Target ", evt.target)
+        const targetValue = evt.target.value;
+        // this.state.username = targetValue;
+        // this.forceUpdate();
+
+        //set state executes in a callback manner and updates the value in conservative batch processing and then 
+        //invokes render method of the component
+        this.setState({
+            username : targetValue
+        })
+
+        console.log(this.state.username);
     }
 
     render(){
         return(
         <>
             <h1>{this.props.title}</h1>
-            {/* {this.props.children[0]}
-            {this.props.children[1]} */}
+            <p>{this.state.username}</p>
+
+            <input type={"text"} value={this.state.username} onChange={this.onChangeText} ></input>
+
             <Address address = {this.state.address}></Address>
         </>)
     }

@@ -16,3 +16,6 @@ let Address = (props)=>{
 }
 
 export default Address;
+
+//create a student component and make it child in home and pass studentDetails as an object
+//defaultProps and PropTypes

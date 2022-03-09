@@ -12,15 +12,19 @@ export default class AppComponent extends Component //React.Component
             timeNow : (new Date()).toLocaleTimeString()
         }
         this.pi = 3.14159;
-        this.updateTime();
+        //this.updateTime();
     }
 
     updateTime = () =>{
         setInterval(() => {
             console.log(this.state.timeNow)
-            this.setState({
-                timeNow : "XYZ"//(new Date()).toLocaleTimeString()
-            })
+            this.state.timeNow = (new Date()).toLocaleTimeString()
+            
+            // this.setState({
+            //     timeNow : (new Date()).toLocaleTimeString()
+            // })
+
+            this.forceUpdate();//it must be avoided to use, but immediately invokes render method
         }, 1000)
     };
 
@@ -34,11 +38,11 @@ export default class AppComponent extends Component //React.Component
         let num2 = 51;        
         return(
             <>
-                <h1 onClick={()=>alert("i am clicked inline")}>This is the react view built using JSX - Javascript Like XML</h1>
-                {/* <b>{someJSValues}</b>
+                {/* <h1 onClick={()=>alert("i am clicked inline")}>This is the react view built using JSX - Javascript Like XML</h1>
+                <b>{someJSValues}</b>
                 <div> This is div in jsx {pi}</div>
-                <p>{this.state.timeNow}</p>
-                <b>{num1*num2}</b>
+                <p>{this.state.timeNow}</p> */}
+                {/* <b>{num1*num2}</b>
                 <br/>
                 <b>{num1+num2}</b>
                 <br/>
