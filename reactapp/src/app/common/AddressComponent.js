@@ -2,13 +2,14 @@ import React from "react";
 
 
 let Address = (props)=>{
+    const address = props.address;
     return(
         <>
             <h2>Address</h2>
             <div>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>{address.homeaddress}</p>
+                <p>{address.flatNo}</p>
+                <p>{address.street}</p>
             </div>
         </>
     )

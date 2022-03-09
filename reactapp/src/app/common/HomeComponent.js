@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {PropTypes} from "prop-types";
+import Address from "./AddressComponent";
 
 export default class Home extends Component {
     constructor(props, context){
@@ -9,6 +10,14 @@ export default class Home extends Component {
 
         //kim - red color (car)
         //cody's - green (car)
+        this.state = {
+            address : {
+                homeaddress : "Somewhere on earth",
+                flatNo : "12451",
+                street : "Orange Street",
+                zipcode : "a4b45g"
+            }
+        }
     }
 
     render(){
@@ -17,6 +26,7 @@ export default class Home extends Component {
             <h1>{this.props.title}</h1>
             {/* {this.props.children[0]}
             {this.props.children[1]} */}
+            <Address address = {this.state.address}></Address>
         </>)
     }
 }
