@@ -49,7 +49,7 @@ export default class Home extends Component {
             <input type={"text"} className="username" value={this.state.username} onChange={this.onChangeText} ></input>
             
             {/* sending title back from home component to application component using callback feature of Javascript */}
-            <input type={"button" value="Click To Update Title"} onClick={()=>this.props.updateTitle("Updated Title From Home")}></input>
+            <input type={"button"} onClick={()=>this.props.updateTitle("Updated Title From Home")}>Click To Update Title</input>
             <Address address = {this.state.address}></Address>
         </>)
     }
