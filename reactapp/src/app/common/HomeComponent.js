@@ -23,6 +23,8 @@ export default class Home extends Component {
 
     onChangeText = (evt) => {
         console.log("Target ", evt.target)
+
+        //alert(evt.target.classList)
         const targetValue = evt.target.value;
         // this.state.username = targetValue;
         // this.forceUpdate();
@@ -37,13 +39,17 @@ export default class Home extends Component {
     }
 
     render(){
+        console.log("Render method of Home Component")
+
         return(
         <>
             <h1>{this.props.title}</h1>
             <p>{this.state.username}</p>
 
-            <input type={"text"} value={this.state.username} onChange={this.onChangeText} ></input>
-
+            <input type={"text"} className="username" value={this.state.username} onChange={this.onChangeText} ></input>
+            
+            {/* sending title back from home component to application component using callback feature of Javascript */}
+            <input type={"button" value="Click To Update Title"} onClick={()=>this.props.updateTitle("Updated Title From Home")}></input>
             <Address address = {this.state.address}></Address>
         </>)
     }

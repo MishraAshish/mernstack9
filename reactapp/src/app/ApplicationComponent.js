@@ -9,7 +9,8 @@ export default class AppComponent extends Component //React.Component
         super(props);
 
         this.state = {
-            timeNow : (new Date()).toLocaleTimeString()
+            timeNow : (new Date()).toLocaleTimeString(),
+            title : "Home Component Title"
         }
         this.pi = 3.14159;
         //this.updateTime();
@@ -28,14 +29,19 @@ export default class AppComponent extends Component //React.Component
         }, 1000)
     };
 
-    onclickTest = ()=>{
-        alert("i am clicked");
+    onclickTest = (updatedTitle)=>{
+        //alert("i am clicked");
+
+        this.setState({
+            title : updatedTitle
+        })
     }
 
     render(){
         let someJSValues = "This is the plain text for application";
         let num1 = 50;
-        let num2 = 51;        
+        let num2 = 51;  
+        console.log("Render of Application Component")      
         return(
             <>
                 {/* <h1 onClick={()=>alert("i am clicked inline")}>This is the react view built using JSX - Javascript Like XML</h1>
@@ -52,7 +58,7 @@ export default class AppComponent extends Component //React.Component
                 <b>{this.pi}</b>
                 <Footer2 /> */}
                 
-                <Home title="Home Component Title">
+                <Home title={this.state.title} updateTitle={this.onclickTest}>
                     <h1>Home Component</h1>
                     <h2>Passed from parent AppComponent </h2>    
                 </Home>
