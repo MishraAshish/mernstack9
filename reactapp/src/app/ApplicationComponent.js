@@ -37,6 +37,16 @@ export default class AppComponent extends Component //React.Component
         })
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        
+        //return true;
+        if (nextState.title == this.state.title) {
+            return false; //to not call the render method
+        } else {
+            return true;    
+        }
+    }
+
     render(){
         let someJSValues = "This is the plain text for application";
         let num1 = 50;
