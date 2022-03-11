@@ -1,7 +1,13 @@
 //core react library to give us functionality of react rendering engine
 import React, { Component } from "react"; //react-default import, Component- named import 
+import {BrowserRouter as Router, Routes, Redirect, Route} from "react-router-dom";//
+import "./app.css";
+
 import Footer, {Footer2, pi} from "./common/FooterComponent";
 import Home from "./common/HomeComponent";
+import Header from "./common/HeaderComponent";
+import About from "./common/AboutComponent";
+import NotFound from "./common/NotFoundComponent";
 
 export default class AppComponent extends Component //React.Component
 {
@@ -53,7 +59,7 @@ export default class AppComponent extends Component //React.Component
         let num2 = 51;  
         console.log("Render of Application Component")      
         return(
-            <>
+            <Router>
                 {/* <h1 onClick={()=>alert("i am clicked inline")}>This is the react view built using JSX - Javascript Like XML</h1>
                 <b>{someJSValues}</b>
                 <div> This is div in jsx {pi}</div>
@@ -66,15 +72,25 @@ export default class AppComponent extends Component //React.Component
                 
                 <br/>
                 <b>{this.pi}</b>
-                <Footer2 /> */}
-                
+                <Footer2 /> 
                 <Home title={this.state.title} updateTitle={this.onclickTest}>
-                    <h1>Home Component</h1>
-                    <h2>Passed from parent AppComponent </h2>    
-                </Home>
-                <Footer></Footer>
+                            <h1>Home Component</h1>
+                            <h2>Passed from parent AppComponent </h2>    
+                        </Home>
+                */}
+                <Header/>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/home" element={<Home title={this.state.title} updateTitle={this.onclickTest}>
+                            <h1>Home Component</h1>
+                            <h2>Passed from parent AppComponent </h2>    
+                        </Home>} /> 
+                        <Route path="/about" element={<About />} />  
+                        <Route path="*" element={<NotFound/>} />
+                    </Routes>
+                <Footer/>
                 
-            </>
+            </Router>
         )
     }
 }
