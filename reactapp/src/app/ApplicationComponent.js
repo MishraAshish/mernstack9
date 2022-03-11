@@ -85,7 +85,8 @@ export default class AppComponent extends Component //React.Component
                             <h1>Home Component</h1>
                             <h2>Passed from parent AppComponent </h2>    
                         </Home>} /> 
-                        <Route path="/about" element={<About />} />  
+                        <Route path="/about" element={<About />} /> 
+                        <Route path="/about/:id" element={<About />} /> 
                         <Route path="*" element={<NotFound/>} />
                     </Routes>
                 <Footer/>

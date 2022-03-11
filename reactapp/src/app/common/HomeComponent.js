@@ -101,7 +101,7 @@ import Address from "./AddressComponent";
         <>
             <h1>{this.props.title}</h1>
             <p>{this.state.username}</p>
-            <a href="/about">Go To About</a>
+            
             <input type={"text"} className="username" value={this.state.username} onChange={this.onChangeText} ></input>
             
             {/* sending title back from home component to application component using callback feature of Javascript */}
