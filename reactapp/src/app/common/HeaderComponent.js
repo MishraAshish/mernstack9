@@ -26,3 +26,6 @@ let Header = (props)=>{
 }
 
 export default Header;
+
+
+//create a class with your own name and implement all the component lifecyles

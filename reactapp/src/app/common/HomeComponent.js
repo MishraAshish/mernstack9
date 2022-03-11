@@ -18,7 +18,10 @@ import Address from "./AddressComponent";
                 street : "Orange Street",
                 zipcode : "a4b45g"
             },
-            username : "props.username"
+            address1 : "address1",
+            username : "props.username",
+            inputAddress : "inputAddress",
+            inputSession : "MERNStack"
         }
 
         //ref - keyword uses
@@ -26,16 +29,17 @@ import Address from "./AddressComponent";
         this.inputAddress = React.createRef(); 
 
         //this.inputAddress.current.focus(); //view can't be accessed in constructor
+        this.inputSession = React.createRef();
     }
 
     //creation life cycle method
     componentDidMount(){
         console.log("componentDidMount")
         //view is accessible
-        setTimeout(() => {
-            this.inputAddress.current.focus();
-            this.inputAddress.current.value = "New value after three seconds";
-        },3000)
+        // setTimeout(() => {
+        //     this.inputAddress.current.focus();
+        //     this.inputAddress.current.value = "New value after three seconds";
+        // },3000)
     }
 
     //update lifecycle methods
@@ -94,6 +98,21 @@ import Address from "./AddressComponent";
         console.log(this.state.username);
     }
 
+    onSubmitForm = (evt)=>{
+
+        const session = this.inputSession.current.value;
+        const newAddress = this.inputAddress.current.value;
+
+        //alert(session + " " + newAddress)
+
+        this.setState({
+            inputSession : session,
+            inputAddress  : newAddress
+        })
+
+        evt.preventDefault();//we stop the default behaviour of form submission to serverso avoid page reload
+    }
+
     render(){
         console.log("Render method of Home Component")
 
@@ -103,11 +122,34 @@ import Address from "./AddressComponent";
             <p>{this.state.username}</p>
             
             <input type={"text"} className="username" value={this.state.username} onChange={this.onChangeText} ></input>
+            <input type={"text"} className="address" value={this.state.address1} 
+                            onChange={(e)=>{this.setState({ address1 : e.target.value })}} ></input>
             
             {/* sending title back from home component to application component using callback feature of Javascript */}
             <input type={"button"} onClick={()=>this.props.updateTitle("Updated Title From Home")} value="Click To Update Title"></input>
             
-            <input type={"text"} value="Ref Textbox" ref={this.inputAddress} onChange={()=>{}}></input>
+            {/* We are going to create an uncontrolled html form with html elements, 
+                it is controlled element values are not going to be part of react state */}
+
+            <form onSubmit={this.onSubmitForm}>
+                <label>
+                        Session Name:
+                        <input type="text" ref={this.inputSession} placeholder="Please enter session"/>
+                </label>
+                
+                <label>
+                        Address:
+                        <input type="text" ref={this.inputAddress} placeholder="Please enter address"/>
+                </label>
+
+                <input type="submit" value="Submit" />
+
+                <div>
+                        Age: {this.state.inputSession}
+                        <br/>
+                        Address: {this.state.inputAddress}
+                </div>
+            </form>
 
             <Address address = {this.state.address}></Address>
         </>)
