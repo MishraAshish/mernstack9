@@ -117,21 +117,38 @@ import Address from "./AddressComponent";
         console.log("Render method of Home Component")
 
         return(
-        <>
-            <h1>{this.props.title}</h1>
+        
+        <div className={"loadimage form"} style={{backgroundImage: "url(/images/hm_pic4.jpg)"}}>
+            {/* <p>{this.state.name}</p> */}
+            {/* <img src={"./images/hm_pic4.jpg"} /> */}
+            {/* {this.state.Title} */}
+            <b className="feature">{"Below Feature's We've Implemented in our project :"}</b>
+            <ul>                     
+                <li>Sign up new users</li>
+                <li>Login existing users.</li>
+                <li>Add products/items to create product collection.</li>
+                <li>Allow user's to add to cart.</li>
+                <li>Save the user's cart.</li>
+                <li>Checkout and pay for items.</li>
+                <li>Allow users to cancel the order.</li>
+                <li>Allow users to reorder the cart.</li>
+                <li>Allow users to give ratings to each product.</li>
+                <li>Have notifications on top right with logout.</li>
+            </ul>
+            {/* <h1>{this.props.title}</h1>
             <p>{this.state.username}</p>
             
             <input type={"text"} className="username" value={this.state.username} onChange={this.onChangeText} ></input>
             <input type={"text"} className="address" value={this.state.address1} 
                             onChange={(e)=>{this.setState({ address1 : e.target.value })}} ></input>
-            
+             */}
             {/* sending title back from home component to application component using callback feature of Javascript */}
-            <input type={"button"} onClick={()=>this.props.updateTitle("Updated Title From Home")} value="Click To Update Title"></input>
+            {/* <input type={"button"} onClick={()=>this.props.updateTitle("Updated Title From Home")} value="Click To Update Title"></input> */}
             
             {/* We are going to create an uncontrolled html form with html elements, 
                 it is controlled element values are not going to be part of react state */}
 
-            <form onSubmit={this.onSubmitForm}>
+            {/*<form onSubmit={this.onSubmitForm}>
                 <label>
                         Session Name:
                         <input type="text" ref={this.inputSession} placeholder="Please enter session"/>
@@ -151,8 +168,8 @@ import Address from "./AddressComponent";
                 </div>
             </form>
 
-            <Address address = {this.state.address}></Address>
-        </>)
+            <Address address = {this.state.address}></Address> */}
+        </div>)
     }
 }
 

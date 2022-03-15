@@ -2,7 +2,7 @@
 
 // create a user class component with state 
 // create react ref elements likes - name, address, age and seesionName
-// use ref elements to create controlled component
+// use ref elements to create uncontrolled component
 // upon form submit set the values from these components to the state
 // show the user typed values from state to multiple labels 
 // list down benefits of controlled over uncontrolled components
