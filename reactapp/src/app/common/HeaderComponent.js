@@ -17,8 +17,8 @@ let Header = (props)=>{
         <>
             <h1>Header Component</h1>
             <hr/>
-            <NavLink to="/home" className="button" activeClassName="success" >Home </NavLink> 
-            <NavLink to="/about" className="button" activeClassName="success" >About </NavLink>
+            <NavLink to="/home" className="button" activeclassname="success" >Home </NavLink> 
+            <NavLink to="/about" className="button" activeclassname="success" >About </NavLink>
             <button onClick={func}>Go To About</button>
             <hr/>
         </>

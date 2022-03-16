@@ -395,10 +395,11 @@ optgroup {
   padding-top: 10px;
 }
 .loadimage ul li{
-  color: #6e096ef6; 
+  color: #f0dd38f6; 
+  cursor : pointer;
 }
 .loadimage ul li:hover{
-  color: #fff; 
+  color: rgb(98, 228, 189); 
 }
 
 .loadimage .feature{

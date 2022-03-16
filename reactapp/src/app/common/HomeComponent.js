@@ -177,6 +177,6 @@ import Address from "./AddressComponent";
 //     title : "Default Title"
 // }
 
-Home.propTypes = {
-    title : PropTypes.string.isRequired
-}
+// Home.propTypes = {
+//     title : PropTypes.string.isRequired
+// }

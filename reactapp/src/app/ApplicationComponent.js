@@ -8,6 +8,7 @@ import Home from "./common/HomeComponent";
 import Header from "./common/HeaderComponent";
 import About from "./common/AboutComponent";
 import NotFound from "./common/NotFoundComponent";
+import Hooks from "./hooks/hooksUsage";
 
 export default class AppComponent extends Component //React.Component
 {
@@ -85,6 +86,7 @@ export default class AppComponent extends Component //React.Component
                             <h1>Home Component</h1>
                             <h2>Passed from parent AppComponent </h2>    
                         </Home>} /> 
+                        <Route path="/about" element={<Hooks />} /> 
                         <Route path="/about" element={<About />} /> 
                         <Route path="/about/:id" element={<About />} /> 
                         <Route path="*" element={<NotFound/>} />
