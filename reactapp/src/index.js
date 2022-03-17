@@ -2,12 +2,17 @@
 console.log("this is the entry file of our project")
 //alert("Entry file!")
 import React from "react";
-import {render} from "react-dom"; // responsible to create virtual dom 
-import AppComponent from "./app/ApplicationComponent";
+import { render } from "react-dom"; // responsible to create virtual dom 
+import { Provider } from "react-redux";
+
+import store from "./app/state/store"; //redux //store will be available as props in each component
+import AppComponent from "./app/ApplicationComponent"; //react
 
 //for diff between real dom and virtual dom, patch if any difference is found
 render(
-    <AppComponent/>,//component that we need to render as the core application
+    <Provider store={store}> 
+        <AppComponent/>
+    </Provider>,//component that we need to render as the core application
     document.getElementById("root") //bootstrapping react application on root container
 )
 
