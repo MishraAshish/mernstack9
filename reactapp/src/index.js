@@ -6,7 +6,7 @@ import { render } from "react-dom"; // responsible to create virtual dom
 import { Provider } from "react-redux";
 
 import store from "./app/state/store"; //redux //store will be available as props in each component
-import AppComponent from "./app/ApplicationComponent"; //react
+import AppComponent from "./app/app"; //react
 
 //for diff between real dom and virtual dom, patch if any difference is found
 render(

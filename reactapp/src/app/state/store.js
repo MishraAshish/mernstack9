@@ -9,6 +9,7 @@ import thunk from "redux-thunk"; //is used to pipeline the dispatched objects an
 import promise from "redux-promise-middleware";//is used to make calls to the server using promise
 
 import userReducer from "./user/userReducer";
+//import productReducer from "./product/productReducer";
 
 let logger = () => (next) => (action) => {
     //currying in javasript where we pass function as input and recieve function as output
