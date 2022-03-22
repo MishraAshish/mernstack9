@@ -7,7 +7,7 @@ let INITIAL_STATE = {
     user : {
         userName : "",
         password : "",
-        street : "wall street some other street as well",
+        street : "wall street some",
         mobile : 0,
         _id: ""
     }

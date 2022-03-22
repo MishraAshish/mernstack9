@@ -42,6 +42,20 @@ export default class UserComponent extends Component {
 
     }
 
+    // static getDerivedStateFromProps(props, state) {
+    //     // Note we need to store prevPropsState to detect changes.
+    //     console.log("props ", props)
+    //     console.log("state ", state)
+    //     if (props.user !== state.user) {
+    //         console.log("Changes in props")
+    //       return {
+    //         prevPropsState: state.user,
+    //         state: props.user
+    //       };
+    //     }
+    //     return null;
+    //   }
+
     loginUser = ()=>{
         //alert("we are going to sign in below user - " +JSON.stringify(this.state))
         //this.props.addUserToStore(this.state);

@@ -10,6 +10,7 @@ import About from "./common/AboutComponent";
 import NotFound from "./common/NotFoundComponent";
 //import User from "./appComponents/Components/User/UserComponent";
 import User from "./appComponents/Container/UserContainer";
+import UserHook from "./appComponents/Components/User/UserComponentHooks";
 //import Hooks from "./hooks/hooksUsage";
 
 export default class AppComponent extends Component //React.Component
@@ -89,6 +90,7 @@ export default class AppComponent extends Component //React.Component
                             <h2>Passed from parent AppComponent </h2>    
                         </Home>} /> 
                         <Route path="/user" element={<User />} /> 
+                        <Route path="/userhook" element={<UserHook />} /> 
                         {/* <Route path="/about" element={<Hooks />} />  */}
                         <Route path="/about" element={<About />} /> 
                         <Route path="/about/:id" element={<About />} /> 
