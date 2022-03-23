@@ -1,4 +1,4 @@
-//23-3-2022 - Product
+//23-3-2022 - Practice Question 1 : Product
 
 // Create a product component using functional component and hooks (try using use state to read default values from reducer)
 // Create a form to allowuser to submit Product Details - name, price, desc, rating

@@ -11,6 +11,7 @@ import NotFound from "./common/NotFoundComponent";
 //import User from "./appComponents/Components/User/UserComponent";
 //import User from "./appComponents/Container/UserContainer";
 import UserHook from "./appComponents/Components/User/UserComponentHooks";
+import Product from "./appComponents/Components/Product/ProductComponent";
 //import Hooks from "./hooks/hooksUsage";
 
 export default class AppComponent extends Component //React.Component
@@ -91,6 +92,7 @@ export default class AppComponent extends Component //React.Component
                         </Home>} /> 
                         {/* <Route path="/user" element={<User />} />  */}
                         <Route path="/user" element={<UserHook />} /> 
+                        <Route path="/product" element={<Product />} /> 
                         {/* <Route path="/about" element={<Hooks />} />  */}
                         <Route path="/about" element={<About />} /> 
                         <Route path="/about/:id" element={<About />} /> 
