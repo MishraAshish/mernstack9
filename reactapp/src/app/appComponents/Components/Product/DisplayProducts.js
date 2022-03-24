@@ -18,7 +18,7 @@ let DisplayProducts = (props)=>
                 <div>
                     {products && products.length >= 1 ? 
                         products.map((product)=>{
-                            return <DisplayDetailedProduct product={product}/>
+                            return <DisplayDetailedProduct product={product} key={product._id}/>
                         })
                         :
                         <b>No Products Available. Please ask admin to add some!</b>

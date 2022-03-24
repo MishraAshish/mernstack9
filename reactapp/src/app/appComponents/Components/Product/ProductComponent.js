@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { saveProduct } from "../../../state/product/productAction";
-// import DisplayProduct from "./DisplayProduct";
+import DisplayProducts from "./DisplayProducts";
 
 
 let ProductComponent = ()=>{
@@ -61,7 +61,7 @@ let ProductComponent = ()=>{
                         onClick={saveProductClick}/>
                     </div>
                 <br/>
-                {/* <DisplayProduct/> */}
+                <DisplayProducts/>
             </section>
         </>
     )
