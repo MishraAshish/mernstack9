@@ -25,3 +25,11 @@ export default function ProductReducer(state=INITIAL_STATE, action)
             return state;
     }
 }
+
+
+//products:[{
+//     name: "Product 1"
+// },
+// {
+//    name: "Product 2"
+// }]
