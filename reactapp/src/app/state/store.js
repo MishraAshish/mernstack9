@@ -10,18 +10,19 @@ import promise from "redux-promise-middleware";//is used to make calls to the se
 
 import userReducer from "./user/userReducer";
 import productReducer from "./product/productReducer";
+import cartReducer from "./cart/cartReducer";
 
 let logger = () => (next) => (action) => {
     //currying in javasript where we pass function as input and recieve function as output
-    console.log("Logged Action : Store File ", action); 
-
+    console.log("Logged Action : Store File ", action);
     next(action); //move to the actual execution
 };
 
 export default createStore(
     combineReducers({
         userReducer, //userReducer : userReducer       
-        productReducer
+        productReducer,
+        cartReducer
     }),
     {},//inital state if we want to set from store instead of reducer
     applyMiddleware(logger, thunk, promise)

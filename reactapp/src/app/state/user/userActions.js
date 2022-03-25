@@ -1,6 +1,8 @@
 //action - is an object which is used to pass data from component to reducer by using type and payload
 
 import * as actionTypes from "../actionTypes";
+import { getUserCart } from "../cart/cartActions";
+
 
 export const addUser = (user)=>{
     return{
@@ -34,7 +36,7 @@ export const signinUser = (userObject)=>{
                 dispatch(action); // it will keep the current context to update the user object and takes it to the reducer
                 
                 //dispatch(loading(false));
-                //dispatch(getUserCart(userresp._id));
+                dispatch(getUserCart(userresp._id));
             })
             .catch((err)=>{
                 //dispatch(loading(false));

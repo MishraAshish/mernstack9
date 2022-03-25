@@ -13,6 +13,7 @@ import NotFound from "./common/NotFoundComponent";
 import UserHook from "./appComponents/Components/User/UserComponentHooks";
 import Product from "./appComponents/Components/Product/ProductComponent";
 import DisplayProduct from "./appComponents/Components/Product/DisplayProducts";
+import CartComponent from "./appComponents/Components/Cart/CartComponent";
 //import Hooks from "./hooks/hooksUsage";
 
 export default class AppComponent extends Component //React.Component
@@ -95,6 +96,7 @@ export default class AppComponent extends Component //React.Component
                         <Route path="/user" element={<UserHook />} /> 
                         <Route path="/product" element={<Product />} /> 
                         <Route path="/display" element={<DisplayProduct />} /> 
+                        <Route path="/cart" element={<CartComponent />} /> 
                         {/* <Route path="/about" element={<Hooks />} />  */}
                         <Route path="/about" element={<About />} /> 
                         <Route path="/about/:id" element={<About />} /> 

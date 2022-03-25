@@ -6,10 +6,12 @@ const cors = require("cors");
 const adminRouter = require('./routes/adminrouter');
 const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
+const cartRouter = require('./routes/cartRouter');
 
 const adminApp = express();
 const userApp = express();
 const productApp = express();
+const cartApp = express();
 
 app.use(cors());//this middleware we are setting to make all api's accept request from other domain or port(localhost:9092)
 app.use('/static', express.static('public')); // serve static files like images css using static middle ware
@@ -23,6 +25,9 @@ userApp.use("/",userRouter); //routing the /admin requests to admin route table
 
 app.use('/product', productApp);
 productApp.use('/', productRouter);
+
+app.use('/cart', cartApp);
+cartApp.use('/', cartRouter);
 
 app.use("/", router);
 
