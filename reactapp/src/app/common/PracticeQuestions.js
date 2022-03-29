@@ -17,7 +17,7 @@
 
 // On product page the signed in user with name - Admin, should only be allowed to add product
 
-//(Hoaian - Done, Rest are in progress)
+//(Hoaian, Cody - Done, Kim/ Tohney - In Prog (50%))
 // 28-03-2022 - Practice
 
 // Create A functional component and use react hook or using container to read data from store
