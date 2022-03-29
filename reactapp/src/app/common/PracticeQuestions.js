@@ -1,3 +1,23 @@
+// 29-03-2022 - Coupon Page 
+// Create a component with Name - CouponComponent (Functional Component and Use Hooks)
+// On the page add a Button - GenerateCoupon
+// Upon Click Generate a random coupon of - 6 digits (basically a numeric random value)
+// Dispatch this generated coupon using useDispatch
+// Create a Coupon Reducer to have Coupon Value, Use Reducer to update the coupon value (useSelector coupon)
+// Create action to pass coupon to reducer, with type and payload
+
+
+// 29-03-2022 - Practice 
+
+// In the header component we want to show only three navigations - Home, User, About, when user lands on page
+// If user is signed in then only we want to show all the navigations
+// If user is not signed in then we show a banner or message on top - to use Login page to see other features
+// Once user sign in then - Welcome "User Name", to Shopping cart application
+// the user navigation link should say - Login, untill user is signed in
+
+// On product page the signed in user with name - Admin, should only be allowed to add product
+
+//(Hoaian - Done, Rest are in progress)
 // 28-03-2022 - Practice
 
 // Create A functional component and use react hook or using container to read data from store
