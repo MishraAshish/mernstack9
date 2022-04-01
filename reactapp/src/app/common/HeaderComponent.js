@@ -13,17 +13,31 @@ let Header = (props)=>{
         navigate('/about/5000');
     }
 
-    let userName = props.user && props.user.userName ? props.user.userName : "Alies"; 
+    let userName = props.user && props.user.userName ? props.user.userName : ""; 
 
     return(
         <>
-            <h1>Hi, {userName}</h1>
+            Hi <b>{userName +", "}</b> Welcome to SynergisticIT Shopping Cart 
+            {userName == "" ?<b> Please Login to see other features</b>:""}
             <hr/>
-            <NavLink to="/home" className="button" activeclassname="success" >Home </NavLink> 
-            <NavLink to="/user" className="button" activeclassname="success" >User </NavLink> 
-            <NavLink to="/product" className="button" activeclassname="success" >Product </NavLink> 
-            <NavLink to="/cart" className="button" activeclassname="success" >Cart </NavLink> 
-            <NavLink to="/about" className="button" activeclassname="success" >About </NavLink>
+            <NavLink to="/home" className="button" activeClassName="success" >Home </NavLink> 
+            <NavLink to="/user" className="button" activeClassName="success" >{userName == "" ? "Login" : "User"} </NavLink> 
+            {userName &&
+                <React.Fragment> 
+                <NavLink to="/product" className="button" activeClassName="success" >Product </NavLink> 
+                <NavLink to="/cart" className="button" activeClassName="success" >Cart </NavLink>
+                <NavLink to="/checkout" className="button" activeClassName="success" >Checkout </NavLink>
+                    {/* <Dropdown as={ButtonGroup}>
+                        <Button variant="success">Split Button</Button>
+                        <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="/about">About</Dropdown.Item>
+                            <Dropdown.Item href="/product">Product</Dropdown.Item>
+                            <Dropdown.Item href="/checkout">Checkout</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown> */}
+                </React.Fragment>
+            }
             {/* <button onClick={func}>Go To About</button> */}
             <hr/>
         </>

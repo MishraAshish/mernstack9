@@ -14,6 +14,8 @@ import UserHook from "./appComponents/Components/User/UserComponentHooks";
 import Product from "./appComponents/Components/Product/ProductComponent";
 import DisplayProduct from "./appComponents/Components/Product/DisplayProducts";
 import CartComponent from "./appComponents/Components/Cart/CartComponent";
+import Checkout from "./appComponents/Components/Checkout/CheckoutComponent";
+import Coupon from "./appComponents/Components/Coupon/CouponComponent";
 //import Hooks from "./hooks/hooksUsage";
 
 export default class AppComponent extends Component //React.Component
@@ -97,6 +99,8 @@ export default class AppComponent extends Component //React.Component
                         <Route path="/product" element={<Product />} /> 
                         <Route path="/display" element={<DisplayProduct />} /> 
                         <Route path="/cart" element={<CartComponent />} /> 
+                        <Route path="/coupon" element={<Coupon />} /> 
+                        <Route path="/checkout" element={<Checkout />} /> 
                         {/* <Route path="/about" element={<Hooks />} />  */}
                         <Route path="/about" element={<About />} /> 
                         <Route path="/about/:id" element={<About />} /> 
