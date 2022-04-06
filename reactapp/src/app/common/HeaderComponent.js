@@ -39,6 +39,7 @@ let Header = (props)=>{
                 </React.Fragment>
             }
             {/* <button onClick={func}>Go To About</button> */}
+            <NavLink to="/about" className="button" activeClassName="success" >About </NavLink>
             <hr/>
         </>
     )

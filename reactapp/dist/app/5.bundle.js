@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{31:function(n,e,o){"use strict";o.r(e),o.d(e,"default",function(){return t});var e=o(0),r=o.n(e);function t(n){return r.a.createElement(r.a.Fragment,null,r.a.createElement("h1",null,"The Page your are looking for is Coming Soon... "))}}}]);
